@@ -249,7 +249,7 @@ $.extend( AutoFill.prototype, {
 		if ( ! handleDim.height || ! handleDim.width ) {
 			// Append to document so we can get its size. Not expecting it to
 			// change during the life time of the page
-			handle.appendTo( 'body' );
+			handle.appendTo( this.dom.offsetParent );
 			handleDim.height = handle.outerHeight();
 			handleDim.width = handle.outerWidth();
 		}

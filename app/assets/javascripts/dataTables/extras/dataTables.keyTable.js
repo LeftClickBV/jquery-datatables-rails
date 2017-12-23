@@ -664,7 +664,7 @@ $.extend( KeyTable.prototype, {
 				}
 				break;
 
-			case 33: // page up (previous page)
+			/* case 33: // page up (previous page)
 			case 34: // page down (next page)
 				if ( navEnable ) {
 					e.preventDefault();
@@ -673,7 +673,7 @@ $.extend( KeyTable.prototype, {
 						.page( e.keyCode === 33 ? 'previous' : 'next' )
 						.draw( false );
 				}
-				break;
+				break; */
 
 			case 35: // end (end of current page)
 			case 36: // home (start of current page)

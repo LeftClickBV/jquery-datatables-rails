@@ -365,6 +365,10 @@ $.extend( AutoFill.prototype, {
 		};
 		var colIndx = dt.column.index( 'toData', end.column );
 
+		if(this.c.horizontal_only && endCell.index() != startCell.index()){
+			return;
+		}
+
 		// Be sure that is a DataTables controlled cell
 		if ( ! dt.cell( endCell ).any() ) {
 			return;
@@ -1072,6 +1076,8 @@ AutoFill.defaults = {
 
 	/** @type {column-selector} Columns to provide auto fill for */
 	columns: '', // all
+
+	horizontal_only: false,
 
 	/** @type {Boolean} Enable AutoFill on load */
 	enable: true,

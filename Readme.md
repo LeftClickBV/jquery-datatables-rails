@@ -7,6 +7,9 @@ It provides all the basic DataTables files, and a few of the extras.
 
 # Important
 
+** Updated to dataTables 1.10.16 **
+** Added Bootstrap 4 support **
+
 **The current gem is released without updated plugins.**
 
 **jQuery DataTables renamed the parameters names, if you are updating, please take a look http://www.datatables.net/upgrade/1.10-convert**
@@ -50,45 +53,8 @@ This will add to the corresponding asset files
 ```
 
 
-## Twitter Bootstrap 2 Installation
 
-1 - Complete steps 1-2 of the General Installation
-
-2 - Run the install generator:
-
-```bash
-$ rails generate jquery:datatables:install bootstrap2
-```
-
-This will add to the corresponding asset files
-
-```ruby
-# app/assets/javascripts/application.js
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/2/jquery.dataTables.bootstrap
-
-# app/assets/stylesheets/application.css
-*= require dataTables/bootstrap/2/jquery.dataTables.bootstrap
-```
-
-3 - Initialize your datatables using one of these options:
-
-```javascript
-// For fluid containers
-$('.datatable').DataTable({
-  dom: "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-  pagingType: "bootstrap"
-});
-
-// For fixed width containers
-$('.datatable').DataTable({
-  dom: "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-  pagingType: "bootstrap"
-});
-```
-
-
-## Twitter Bootstrap 3 Installation
+## Twitter Bootstrap 4 Installation
 
 1 - Complete steps 1-2 of the General Installation
 
@@ -102,10 +68,24 @@ This will add to the corresponding asset files
 ```ruby
 # app/assets/javascripts/application.js
 //= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require dataTables/extras/dataTables.bootstrap4.js
+
+# Extra optional components
+//= require dataTables/extras/dataTables.responsive.js
+//= require dataTables/extras/dataTables.buttons.js
+//= require dataTables/extras/buttons.bootstrap4.js
+//= require dataTables/extras/buttons.html5.js
+//= require dataTables/extras/responsive.bootstrap4.js
 
 # app/assets/stylesheets/application.css
-*= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+
+*= require dataTables/dataTables.jqueryui.css
+*= require dataTables/extras/dataTables.bootstrap4.css
+
+# Optional support for extra dataTables modules
+*= require dataTables/extras/responsive.dataTables.css
+*= require dataTables/extras/responsive.bootstrap4.css
+*= require dataTables/extras/buttons.bootstrap4.css
 ```
 
 3 - Initialize your datatables using these option:

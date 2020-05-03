@@ -7,12 +7,13 @@ It provides all the basic DataTables files, and a few of the extras.
 
 # Important
 
-** Updated to dataTables 1.10.16 **
-** Added Bootstrap 4 support **
+- **Updated to dataTables 1.10.18**
 
-**The current gem is released without updated plugins.**
+- **Added Bootstrap 4 support**
 
-**jQuery DataTables renamed the parameters names, if you are updating, please take a look http://www.datatables.net/upgrade/1.10-convert**
+- **The current gem is released without updated plugins.**
+
+- **jQuery DataTables renamed the parameters names, if you are updating, please take a look http://www.datatables.net/upgrade/1.10-convert**
 
 If you encounter any errors, please fork the repository, update the plugin files and send a pull-request.
 
@@ -26,7 +27,7 @@ Due to an error displaying the plus icon in a recent version of this gem, the re
 1 - Add to your Gemfile:
 
 ```ruby
-gem 'jquery-datatables-rails', '~> 3.4.1'
+gem 'jquery-datatables-rails', git: 'https://github.com/Sebbb/jquery-datatables-rails.git'
 ```
 
 2 - Install the gem:
